@@ -84,7 +84,7 @@ def escape_filter_chars(text, encoding=None):
     output = output.replace(')', '\\29')
     output = output.replace('\x00', '\\00')
     # escape all octets greater than 0x7F that are not part of a valid UTF-8
-    output = ''.join(c if c <= '\x7f' else escape_bytes(to_raw(to_unicode(c, encoding))) for c in output)
+    #output = ''.join(c if c <= '\x7f' else escape_bytes(to_raw(to_unicode(c, encoding))) for c in output)
     return output
 
 
